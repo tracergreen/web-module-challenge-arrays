@@ -40,11 +40,12 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors(/*code here*/){
-
-    /*code here*/
-
-}
+function is31Flavors() {
+    if (originalFlavors.length !== 31) {
+    return false;} else {return true;}
+  }
+  is31Flavors(originalFlavors.length);
+  console.log(originalFlavors.length);
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
