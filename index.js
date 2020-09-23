@@ -40,11 +40,11 @@ To save you from having to count the items above, you can assume that length of 
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
-function is31Flavors() {
-    if (originalFlavors.length !== 31) {
-    return false;} else {return true;}
-  }
-  is31Flavors(originalFlavors.length); //returns true as long as the originalFlavors list is 31, false otherwise
+// function is31Flavors() {
+//     if (originalFlavors.length !== 31) {
+//     return false;} else {return true;}
+//   }
+//   is31Flavors(originalFlavors.length); //returns true as long as the originalFlavors list is 31, false otherwise
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -61,7 +61,7 @@ function addFlavor(){
     originalFlavors.unshift("Rainbow Sherbert");
     return originalFlavors;
 }
-addFlavor(); //adds rainbow sherbert
+addFlavor(); //adds flavor Rainbow Sherbert to beginning, updates originalFlavors.length to 32
 
 // console.log(originalFlavors.length) //test to see if the # of originalFlavors is now 32
 
@@ -109,11 +109,17 @@ Hint: You can use .splice() for this
 
 */
 
-function removeFlavorByName(/*code here*/){
-
-    /*code here*/
-
-}
+function removeFlavorByName(arr, flavorName) {
+    let newArr = [...arr];
+    for (let i = 0; i < newArr.length; i++) {
+      if (flavorName === newArr[i]) {
+        newArr.splice(i,1);
+      }
+    }
+    return newArr;
+  }
+  
+  console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
