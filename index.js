@@ -44,8 +44,7 @@ function is31Flavors() {
     if (originalFlavors.length !== 31) {
     return false;} else {return true;}
   }
-  is31Flavors(originalFlavors.length);
-  console.log(originalFlavors.length);
+  is31Flavors(originalFlavors.length); //returns true as long as the originalFlavors list is 31, false otherwise
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -62,7 +61,9 @@ function addFlavor(){
     originalFlavors.unshift("Rainbow Sherbert");
     return originalFlavors;
 }
-addFlavor();
+addFlavor(); //adds rainbow sherbert
+
+// console.log(originalFlavors.length) //test to see if the # of originalFlavors is now 32
 
 /* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array. 
 
@@ -92,7 +93,7 @@ For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", a
 function getFlavorByIndex(arr,index){
     return arr[index]
 }
-getFlavorByIndex(originalFlavors, 2)
+getFlavorByIndex(originalFlavors, 2) //2 used as test, "Black Walnut"
 
 
 /* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array. 
